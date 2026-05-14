@@ -1,0 +1,7 @@
+flask
+flask-sqlalchemy
+flask-limiter
+flask-cors
+gunicorn
+python-dotenv
+werkzeug
