@@ -1,7 +1,9 @@
-flask
-flask-sqlalchemy
-flask-limiter
-flask-cors
-gunicorn
-python-dotenv
-werkzeug
+cat > ~/requirements.txt << 'EOF'
+flask==3.0.3
+flask-cors==4.0.1
+flask-sqlalchemy==3.1.1
+flask-limiter==3.7.0
+requests==2.32.3
+gunicorn==22.0.0
+psycopg2-binary==2.9.9
+EOF
