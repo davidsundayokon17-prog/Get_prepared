@@ -14,23 +14,15 @@ app = Flask(__name__)
 CORS(app)
 
 # ─── PASTE THE NEW BLOCK RIGHT HERE ──────────────────────────────────
-RAW_URL = "postgresql://postgres:YOUR_PASSWORD_HERE@YOUR_HOST_HERE:YOUR_PORT/railway"
 
-if RAW_URL.startswith("postgres://"):
-    CLEAN_DATABASE_URL = RAW_URL.replace("postgres://", "postgresql://", 1)
-else:
-    CLEAN_DATABASE_URL = RAW_URL
-
-app.config["SQLALCHEMY_DATABASE_URI"] = CLEAN_DATABASE_URL
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://PASTE_YOUR_ACTUAL_RAILWAY_STRING_HERE"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-db = SQLAlchemy(app)
-# ─────────────────────────────────────────────────────────────────────
-
+# ────────────────────────────────────
 # ... (Keep the rest of your file, like PAYSTACK_PUBLIC_KEY, etc.) ...
 
 PAYSTACK_PUBLIC_KEY     = os.getenv("pk_live_10facb7256c431e6120390bc7c6a18a7cca7663f", "")
-PAYSTACK_SECRET_KEY     = os.getenv("sk_live_5c757b451f0a616b7f0f462b54feb0d9a116d090", "")
+PAYSTACK_SECRET_KEY     = os.getenv("sk_live_5c757b4
+51f0a616b7f0f462b54feb0d9a116d090", "")
 PAYSTACK_WEBHOOK_SECRET = os.getenv("sk_live_5c757b451f0a616b7f0f462b54feb0d9a116d090", "")
 APP_SECRET              = os.getenv("APP_SECRET", "getprepared2024admin")
 
