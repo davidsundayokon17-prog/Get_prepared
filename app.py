@@ -11,7 +11,7 @@ from flask_limiter.util import get_remote_address
 app = Flask(__name__)
 CORS(app)
 
-app.config["SQLALCHEMY_DATABASE_URI"]        = os.getenv("DATABASE_URL", "sqlite:///getprepared.db")
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user:password@host:port/database"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 PAYSTACK_PUBLIC_KEY     = os.getenv("pk_live_10facb7256c431e6120390bc7c6a18a7cca7663f", "")
